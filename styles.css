@@ -110,7 +110,8 @@ body {
 
 .center-right {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto, 2);
+  margin: 10px;
 }
 
 .project-grid {
@@ -130,6 +131,21 @@ body {
   border-left: 8px solid goldenrod;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcements {
+  height: max-content;
+}
+
+.announcements > div {
+  background-color: #f8f8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.announcements > div div {
+  font-size: 12px;
 }
 
 .icon {
