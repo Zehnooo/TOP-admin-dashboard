@@ -196,19 +196,22 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform ease-in-out 0.08s;
+    font-size: 16px;
 }
 
 .project-grid > div:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
-.project-grid > div > p {
+.project-grid > div > p,
+.announcements > div > div > p {
     color: grey;
     margin: 0;
     flex: 1;
 }
 
-.project-grid > div h2 {
+.project-grid > div h2,
+.announcements > div > div > h3 {
     margin: 2px 0;
 }
 
@@ -225,8 +228,12 @@ body {
     border-radius: 12px;
 }
 
+.announcements > div > div {
+    margin: 32px;
+}
+
 .announcements > div div {
-    font-size: 12px;
+    font-size: 14px;
     justify-content: center;
     align-items: center;
 }
@@ -268,8 +275,26 @@ body {
     cursor: pointer;
 }
 
-.underline {
-    border-bottom: 2px solid lightgray;
+
+.interactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 16px;
+
+}
+
+.interactions img {
+    width: 32px;
+    opacity: .5;
+}
+
+.interactions img:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 
