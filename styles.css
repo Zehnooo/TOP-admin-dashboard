@@ -268,3 +268,9 @@ body {
     cursor: pointer;
 }
 
+.underline {
+    border-bottom: 2px solid lightgray;
+}
+
+
+
