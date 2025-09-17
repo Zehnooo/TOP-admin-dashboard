@@ -46,6 +46,7 @@ body {
 
 #search input {
     width: 80%;
+    padding: 5px;
     height: 30px;
     border-radius: 18px;
     border: none;
@@ -171,9 +172,8 @@ body {
 }
 
 .center-right {
-    display: flex;
-    flex-direction: column;
-    width: clamp(50%, 500px, 95%);
+    display: grid;
+    grid-template-rows: repeat(2, auto);
     padding: 10px;
 }
 
@@ -215,10 +215,11 @@ body {
     margin: 2px 0;
 }
 
-.announcements,
-.trending {
-    width: 100%;
+.announcements > div {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
 }
+
 
 .announcements > div,
 .trending > div {
@@ -229,7 +230,7 @@ body {
 }
 
 .announcements > div > div {
-    margin: 32px;
+    margin: 24px;
 }
 
 .announcements > div div {
@@ -246,13 +247,21 @@ body {
     overflow-wrap: anywhere;
 }
 
-.trending > div > div {
+.trending {
     display: flex;
-    padding: 5px;
-    gap: 24px;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.trending > div {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+
+.trending > div > div {
+    display: grid;
+    grid-template-columns: minmax(75px, auto) minmax(125px, auto);
     align-items: center;
-    text-align: left;
+    justify-items: center;
     font-size: 14px;
 }
 
